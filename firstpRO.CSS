@@ -1,0 +1,122 @@
+body{
+    justify-content: center;
+    justify-items: center;
+    background-color: #f2f2f2;
+    margin: 0;
+    display: flex;
+    background-image: url(rm373batch13-086.jpg);
+    background-attachment: fixed;
+
+}
+
+.container{
+    background-color: white;
+    box-shadow: 0 0 0 10 0 ;
+    margin: 100px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 5px;
+
+}
+h1{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+}
+p{
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;  
+}
+
+button{
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    margin: 20px 0;
+    width: 500px;
+    display:flex ;
+    justify-content: center;
+   align-items: center;
+   font-size: 1em;
+
+}
+
+
+input[type="number"]{
+    padding: 10px;
+    width: 480px;
+    border-radius: 5px;
+}
+label{
+    font-size: 1em;
+    font-style: italic;
+    font-weight: bold;
+
+}
+input[type ="search"],select{
+    width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+   border: 2px solid black;
+}
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.line::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+/* خطوط بأماكن مختلفة وتأخيرات مختلفة */
+.line:nth-child(1) {
+  margin-left: -25%;
+}
+.line:nth-child(1)::after {
+  animation-delay: 2s;
+}
+
+.line:nth-child(3) {
+  margin-left: 25%;
+}
+.line:nth-child(3)::after {
+  animation-delay: 2.5s;
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
